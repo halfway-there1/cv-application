@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import GeneralInfo from './components/GeneralInfo';
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GeneralInfo />
+    <App />
   </React.StrictMode>
 );
