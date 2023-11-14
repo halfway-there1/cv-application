@@ -2,17 +2,11 @@
 import FormField from './FormField';
 import { handleChange } from '../utils';
 import { useState } from 'react';
-import { useEffect } from 'react';
 
 function GeneralInfo() {
   const [name, setName] = useState('Anurag Kumar');
   const [email, setEmail] = useState('someone@gmail.com');
   const [phoneNumber, setPhoneNumber] = useState('1234567890');
-
-  // console.log('new render');
-  useEffect(() => {
-    console.log('name or email or phone number changed');
-  }, [name, email, phoneNumber]);
 
   return (
     <>
