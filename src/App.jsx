@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import PersonalDetails from './components/PersonalDetails';
-import EducationalInfo, { ResumeEducation } from './components/EducationalInfo';
-import Experience from './components/Experience';
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -18,8 +16,7 @@ function App() {
       });
     };
   }
-  // const [educationalInfo, setEducationalInfo] = useState({});
-  // const [experience, setExperience] = useState({});
+
   console.log('rendering App');
   return (
     <>
@@ -28,12 +25,16 @@ function App() {
           {...personalDetails}
           handlePersonalDetailsChange={handlePersonalDetailsChange}
         />
+      </div>
+      <br />
+      <hr />
+      <div className="preview">
+        <h2>Preview</h2>
 
-        <br />
-        {/* <EducationalInfo />
-        <br />
-        <Experience />
-        <br /> */}
+        <h3>Personal Details</h3>
+        <p>Name: {personalDetails.name}</p>
+        <p>Email: {personalDetails.email}</p>
+        <p>Phone Number: {personalDetails.phoneNumber}</p>
       </div>
     </>
   );
