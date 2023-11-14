@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 function FormField({ label, type, id, value, onChange }) {
   return (
     <p>

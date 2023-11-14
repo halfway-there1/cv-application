@@ -1,5 +1,5 @@
 import FormField from './FormField';
-import handleChange from '../handleChange';
+import { handleChange } from '../utils';
 import { useState } from 'react';
 
 function EducationalInfo() {
@@ -7,48 +7,47 @@ function EducationalInfo() {
   const [degree, setDegree] = useState('Bachelors of Computer Science');
   const [startDate, setStartDate] = useState('2017-08-01');
   const [endDate, setEndDate] = useState('2021-05-01');
+  const [location, setLocation] = useState('Berkeley, CA');
 
   return (
     <>
-      <form
-        action="/"
-        onSubmit={(event) => {
-          event.preventDefault();
-          alert(
-            `school: ${school}\ndegree: ${degree}\nstartDate: ${startDate}\nendDate: ${endDate}`
-          );
-        }}
-      >
-        <legend>Educational Info</legend>
+      <form action="/" name="educationalInfo">
+        <legend>Education</legend>
         <FormField
-          label="school"
+          label="School"
           id="school"
           type="text"
           value={school}
           onChange={handleChange(setSchool)}
         />
         <FormField
-          label="degree"
+          label="Degree"
           id="degree"
           type="text"
           value={degree}
           onChange={handleChange(setDegree)}
         />
         <FormField
-          label="startDate"
+          label="Start Date"
           id="startDate"
           type="date"
           value={startDate}
           onChange={handleChange(setStartDate)}
         />
         <FormField
-          label="endDate"
+          label="End Date"
           id="endDate"
           type="date"
           value={endDate}
           onChange={handleChange(setEndDate)}
         />
-        <input type="submit" value="Submit" />
+        <FormField
+          label="Location"
+          id="location"
+          type="text"
+          value={location}
+          onChange={handleChange(setLocation)}
+        />
       </form>
     </>
   );

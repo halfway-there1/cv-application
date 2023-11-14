@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import FormField from './FormField';
-import handleChange from '../handleChange';
+import { handleChange } from '../utils';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -16,10 +16,10 @@ function GeneralInfo() {
 
   return (
     <>
-      <form action="/">
-        <legend>Contact Info</legend>
+      <form action="/" name="generalInfo">
+        <legend>Personal Details</legend>
         <FormField
-          label="Name"
+          label="Full name"
           type="text"
           id="name"
           value={name}
@@ -39,7 +39,6 @@ function GeneralInfo() {
           value={phoneNumber}
           onChange={handleChange(setPhoneNumber)}
         />
-        <input type="submit" value="Submit" />
       </form>
     </>
   );
