@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import FormField from './FormField';
+import handleChange from '../handleChange';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -8,12 +9,6 @@ function GeneralInfo() {
   const [email, setEmail] = useState('someone@gmail.com');
   const [phoneNumber, setPhoneNumber] = useState('1234567890');
 
-  function handleChange(setX) {
-    return function (event) {
-      setX(event.target.value);
-    };
-  }
-
   // console.log('new render');
   useEffect(() => {
     console.log('name or email or phone number changed');
@@ -21,8 +16,8 @@ function GeneralInfo() {
 
   return (
     <>
-      <legend>Contact Info</legend>
       <form action="/">
+        <legend>Contact Info</legend>
         <FormField
           label="Name"
           type="text"

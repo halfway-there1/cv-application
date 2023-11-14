@@ -5,5 +5,10 @@
 #header {
   background-color: black;
   color: white;
+  padding: 0.5em;
   text-align: center;
+}
+
+#root {
+  padding: 1em;
 }
