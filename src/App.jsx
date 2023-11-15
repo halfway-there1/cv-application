@@ -59,7 +59,6 @@ function App() {
     };
   }
 
-  console.log('rendering App');
   return (
     <>
       <div className="edit-side">
